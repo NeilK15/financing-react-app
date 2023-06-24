@@ -1,23 +1,21 @@
-import { useState } from 'react';
-import Alert from './components/Alert';
-import Button from './components/Button';
+import Tile from './components/Tile/Tile';
+import TextInput from './components/TextInput';
 
 function App() {
-  const [isAlerting, setIsAlerting] = useState(false);
+  const leftContent = (
+    <>
+      <p>Left content</p>
+      <TextInput
+        placeholder="Net Income"
+        onChange={(val) => console.log(val)}
+      />
+    </>
+  );
 
   return (
-    <div>
-      {isAlerting && (
-        <Alert onClose={() => setIsAlerting(false)}>My Alert</Alert>
-      )}
-      <Button
-        color="primary"
-        onClick={() => {
-          setIsAlerting(true);
-        }}
-      >
-        My Button
-      </Button>
+    <div className="d-flex justify-content-center">
+      <Tile name="Left" margin="auto" content={leftContent} />
+      <Tile name="Right" margin="auto" />
     </div>
   );
 }
