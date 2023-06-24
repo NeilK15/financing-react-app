@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  margin-top: 2.5vh;
+  height: 95vh;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.test-border {
+  border: 5px dotted red;
+}
+
+/* Tile related style */
+.tile {
+  display: flex;
+  flex-flow: column;
+
+  background-color: rgb(30, 36, 97);
+  height: 100%;
+  margin: 0 10px 0 10px;
+  padding: 10px 15px 10px 15px;
+
+  border-radius: 2%;
+}
+
+.tile__title {
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tile__content {
+  color: azure;
+}
+
+/* Money value related style */
+.money-value {
+  color: rgb(25, 212, 25);
+}
