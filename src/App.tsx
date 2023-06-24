@@ -1,19 +1,21 @@
-import ListGroup from './components/ListGroup';
+import Tile from "./components/Tile/Tile";
+import TextInput from "./components/TextInput";
 
 function App() {
-  const items = ['New York', 'San Francisco', 'Tokyo', 'London', 'Paris'];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
+  const leftContent = (
+    <>
+      <p>Left content</p>
+      <TextInput
+        placeholder="Net Income"
+        onChange={(val) => console.log(val)}
+      />
+    </>
+  );
 
   return (
-    <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectItem}
-      />
+    <div className="d-flex justify-content-center">
+      <Tile name="Left" margin="auto" content={leftContent} />
+      <Tile name="Right" margin="auto" />
     </div>
   );
 }
